@@ -19,4 +19,6 @@ echo "Fifth random number  :" $fifthNumber
 result=$(( $firstNumber + $secondNumber + $thirdNumber + $fourthNumber + $fifthNumber))
 echo "Sum of Random Two Digit random 5 numbers are :" $result
 
-
+#AVERAGE OF 5 RANDOM NUMBERS
+average=$(( $result/5 ))
+echo "Average of random 5 Numbers are :" $average
