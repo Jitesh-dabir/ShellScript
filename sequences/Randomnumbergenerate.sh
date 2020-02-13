@@ -1,4 +1,4 @@
-#! /bin/bash -x
+#!/bin/bash -x
 
 #GENERATE RANDOM NUMBER
 randomNumber=$(( RANDOM%100 ))
