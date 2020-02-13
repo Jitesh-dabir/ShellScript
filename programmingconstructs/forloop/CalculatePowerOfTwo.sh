@@ -1,15 +1,15 @@
 #!/bin/bash -x
 
 #VARIABLE
-pow=1
+power=1
 
 #TAKE NUMBER FROM USER
 read -p "enter n " number
 
 #CALCULATE POW OF TWO AND PRINT TABLE UPTO N
-for (( c=1; c<=$number; c++ ))
+for (( index=1; index<=$number; index++ ))
 do
-	pow=$(($pow*2))
-	echo "2 * "$c" =" $pow
+	power=$(($power*2))
+	echo "2 * "$index" =" $power
 done
 
