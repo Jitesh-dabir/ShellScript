@@ -1,49 +1,49 @@
-#!/bin/bash  -x
+#!/bin/bash -x
 
 #VARIABLES
-max=0
-Smax=0
-min=999
-Smin=999
+maximum=0
+secondMaximum=0
+minimum=999
+secondMinimum=999
 
 #GENERATE RANDOM 3 DIGIT NUMBER AND STORE INTO ARRAY 
-for (( i=0; i<10; i++ ))
+for (( index=0; index<10; index++ ))
 do
-	a[i]=$((RANDOM%900+100))
+	a[index]=$((RANDOM%900+100))
 done
 echo "Random 10 number are:"
 echo "${a[@]}"
 
 #FIND MAXIMUM AND SECOND MAXIMUM
-for (( i=0; i<10; i++ ))
+for (( index1=0; index1<10; index1++ ))
 do
-	if [ $((a[i])) -gt $max ]
+	if [ $((a[index1])) -gt $maximum ]
 	then
-		Smax=$max
-		max=$((a[i]))
-	elif [ $((a[i])) -gt $Smax -a $((a[i])) -lt $max ]
+		secondMaximum=$maximum
+		maximum=$((a[index1]))
+	elif [ $((a[index1])) -gt $secondMaximum -a $((a[index1])) -lt $maximum ]
 	then
-		Smax=$((a[i]))
+		secondMaximum=$((a[index1]))
 	fi 
 done
 
 #FIND MINIMUM AND SECOND MINIMUM
-for (( i=0; i<10; i++ ))
+for (( index2=0; index2<10; index2++ ))
 do
-	if [ $((a[i])) -lt $min ]
+	if [ $((a[index2])) -lt $minimum ]
 	then
-		Smin=$min
-		min=$((a[i]))
-	elif [ $((a[i])) -lt $Smin -a $((a[i])) -gt $min ]
+		secondMinimum=$minimum
+		minimum=$((a[index2]))
+	elif [ $((a[index2])) -lt $secondMinimum -a $((a[index2])) -gt $minimum ]
 	then
-		Smin=$((a[i]))
+		secondMinimum=$((a[index2]))
 	fi 
 done
 
 #PRINT MAXIMUM AND SECONDMAXIMUM AND MINIMUM AND SECONDMINIMUM
-echo "maximum:" $max
-echo "Second Maximum:"$Smax
-echo "manimum:" $min
-echo "Second Minimum:" $Smin
+echo "maximum:" $maximum
+echo "Second Maximum:"$secondMaximum
+echo "manimum:" $minimum
+echo "Second Minimum:" $secondMinimum
 
 
