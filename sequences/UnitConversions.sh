@@ -9,3 +9,8 @@ echo $inch " Inch is equal to" $firstResult "Feet"
 read -p "Enter the feet :" feet
 secondResult=$(( $feet*12 ))
 echo  $feet "feet is equal to " $secondResult "inch"
+
+#FEET TO METER CONVERSION
+meter=`echo  "scale=2; (60/3.2808) * (40/3.2808)" | bc`
+echo "60feet * 40feet is equal to "$meter "meter"
+
