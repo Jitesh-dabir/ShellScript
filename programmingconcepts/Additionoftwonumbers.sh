@@ -6,6 +6,6 @@ read -p "Enter Second_Number :" secondNumber
 #ADDITION OF TWO NUMBERS
 result=$(($firstNumber + $secondNumber))
 
-#PRINT TWO  NUMBERS
+#PRINT RESULT
 echo "Addition of two numbers are " $result
 
