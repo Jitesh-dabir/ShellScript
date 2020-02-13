@@ -1,29 +1,38 @@
 #!/bin/bash -x
 
 #TAKE NUMBER FROM USER
-read -p "Enter the number:" number
+read -p "Enter a number" number
 
 #PRINT NUMBER IN WORD
 case $number in
 	1)
-		echo "Unit"
+		echo "One"
 		;;
-	10)
-		echo "Ten"
+	2)
+		echo "Two"
 		;;
-	100)
-		echo "Hundred"
+	3)
+		echo "Three"
 		;;
-	1000)
-		echo "One Thousand"
+	4)
+		echo "Four"
 		;;
-	10000)
-		echo "Ten Thousand"
+	5)
+		echo "Five"
 		;;
-	100000)
-		echo "Hundred Thousand"
+	6)
+		echo "Six"
 		;;
-	1000000)
-		echo "One Billoins"
+	7)
+		echo "Seven"
+		;;
+	8)
+		echo "Eight"
+		;;
+	9)
+		echo "Nine"
+		;;
+	*)
+		echo "Not Single Digit"
 		;;
 esac
