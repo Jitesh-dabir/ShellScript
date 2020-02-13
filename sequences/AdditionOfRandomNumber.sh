@@ -1,4 +1,4 @@
-#! /bin/bash -x
+#!/bin/bash -x
 
 #GENERATE TWO RANDOM NUMBER
 firstNumber=$(( RANDOM%6+1 ))
