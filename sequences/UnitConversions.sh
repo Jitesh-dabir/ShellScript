@@ -2,6 +2,10 @@
 
 #CONVERT INCH TO FEET
 read -p "Enter the Inch :" inch
-value=$(( $inch/12 ))
-echo $inch " Inch is equal to" $value "Feet"
+firstResult=$(( $inch/12 ))
+echo $inch " Inch is equal to" $firstResult "Feet"
 
+#CONVERT FEET TO INCH
+read -p "Enter the feet :" feet
+secondResult=$(( $feet*12 ))
+echo  $feet "feet is equal to " $secondResult "inch"
