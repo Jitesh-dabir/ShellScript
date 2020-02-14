@@ -3,10 +3,10 @@
 #FUNCTION TO FIND REPEATED NUMBERS LIKE 22,11..
 function findRepeate()
 	{
-		n=$1
-		r=$(($n%10))
-		n=$(($n/10))
-		if [ $r -eq $n ]
+		firstNumber=$1
+		remainder=$(($firstNumber%10))
+		number=$(($firstNumber/10))
+		if [ $remainder -eq $number ]
 		then
 			echo 0
 		else
@@ -22,9 +22,9 @@ for (( index=$number; index<100; index++ ))
 do
 	if [ $( findRepeate $index ) -eq 0 ]
 	then
-		b[index]=$index
+		array[index]=$index
 	fi
 done
 
 #PRINT THE ARRAY
-echo  "Repeated number are :${b[@]}"
+echo  "Repeated number are :${array[@]}"
